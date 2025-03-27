@@ -1,0 +1,99 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f2f5f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  width: 400px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  width: 98%;
+  padding: 12px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #1d3557;
+}
+
+.google-btn {
+  background-color: #afa939;
+}
+
+.google-btn:hover {
+  background-color: #d9342d;
+}
+
+a {
+  color: #1d3557;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+/* ✅ For Eye Icon */
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 90%;
+}
+
+.password-field i {
+  position: absolute;
+  right: 20px;
+  top: 12px;
+  cursor: pointer;
+}
+
+.forgot-password {
+  color: #1d3557;
+  text-align: right;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}

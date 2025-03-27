@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="./images/logo.jpg" type="Image">
+    <title>FindMyAdvocate - Experts Screen</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+      
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+  
+    <link rel="stylesheet" href="css/aos.css">
+  
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+      
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card View</title>
+    <link rel="stylesheet" type="text/css" href="css/expertiescard.css">
+    </head>
+  <body>
+    
+	  <!-- START nav -->
+	  <nav class="navbar px-md-0 navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+			<a class="navbar-brand" href="../home.html" style="text-transform: none;">
+				Find MyAdvocate <span style="text-transform: capitalize;">Where Legal Guidance Meets You</span>
+			</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="../home.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="../experts.html" class="nav-link">Experts</a></li> 
+	          <li class="nav-item"><a href="../About.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="../blogntest.html" class="nav-link">Blogs</a></li>
+	          <li class="nav-item"><a href="../contact.html" class="nav-link">Contact Us</a></li>
+            <li class="nav-item"><a href="DeleteAccount.html" class="nav-link">DeleteAccount</a></li>
+			  
+	          <li class="nav-item cta" id="logout"><a href="../newlog.html" class="nav-link">LogOut</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <!-- hero section -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/Lawyersbg.png');" data-stellar-background-ratio="0.5">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-end justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <h1 class="mb-3 bread">Experts</h1>
+            <p class="breadcrumbs"><span class="mr-2"><a href="home.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Expertise <i class="ion-ios-arrow-forward"></i></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="search-bar-section">
+      <div class="search-bar-container">
+          <input id="searchInput" type="text" placeholder="Search experts by name, location, or specialization..." oninput="filterCards()">
+          <span class="clear-icon uil uil-times" onclick="clearSearch()"></span>
+      </div>
+    </section>
+
+    <div class="cards-container">
+      <div class="cards">
+          <div class="image">
+            <img src="images/expertise/prashant.png" alt="Lawyer Prashant Bhushan">
+          </div>
+          <div class="details">
+              <h1>Prashant Bhushan</h1>
+              <p class="location">📍 Delhi, India</p>
+              <p class="expertise">Specialization: Social Justice & Environmental Law</p>
+              <p class="tagline">"Fighting for the people's rights."</p>
+              <a href="advocate_details/PrashantBhushan.html"><button>Read More</button></a>
+          </div>
+      </div>
+  
+      <div class="cards">
+          <div class="image">
+              <img src="images/expertise/anand.jpg" alt="Lawyer Prashant Bhushan">
+          </div>
+          <div class="details">
+              <h1>Anand Grover</h1>
+              <p class="location">📍 Mumbai, India</p>
+              <p class="expertise">Specialization: law relating to homosexuality and HIV.</p>
+              <p class="tagline">"senior lawyer known for legal activism"</p>
+              <a href="advocate_details/AnandGrover.html"><button>Read More</button></a>
+          </div>
+      </div>
+
+      <div class="cards">
+        <div class="image">
+            <img src="images/expertise/vrinda.png" alt="Lawyer Vrinda Grover">
+        </div>
+        <div class="details">
+            <h1>Vrinda Grover</h1>
+            <p class="location">📍 New Delhi, India</p>
+            <p class="expertise">Specialization: Human Rights, Criminal Law</p>
+            <p class="tagline">"Renowned advocate and human rights activist"</p>
+            <a href="advocate_details/vrinda.html"><button>Read More</button></a>
+        </div>
+      </div>
+  
+      <!-- Add all Card -->
+      <div class="cards">
+        <div class="image">
+            <img src="images/expertise/karuna.jpg" alt="Lawyer Karuna Nundy">
+        </div>
+        <div class="details">
+            <h1>Karuna Nundy</h1>
+            <p class="location">📍 Delhi, India</p>
+            <p class="expertise">Specialization: Constitutional Law, Media Law</p>
+            <p class="tagline">"Advocate for women's rights and freedom of speech"</p>
+            <a href="advocate_details/KarunaNundy.html"><button>Read More</button></a>
+        </div>
+      </div>
+
+      <div class="cards">
+        <div class="image">
+            <img src="images/expertise/fali.png" alt="Lawyer Fali Nariman">
+        </div>
+        <div class="details">
+            <h1>Fali Nariman</h1>
+            <p class="location">📍 New Delhi, India</p>
+            <p class="expertise">Specialization: Constitutional and International Law</p>
+            <p class="tagline">"One of India's most respected senior advocates"</p>
+            <a href="advocate_details/FaliNariman.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/jaising.jpeg" alt="Lawyer Indira Jaising">
+        </div>
+        <div class="details">
+            <h1>Indira Jaising</h1>
+            <p class="location">📍 Mumbai, India</p>
+            <p class="expertise">Specialization: Human Rights & Public Interest Litigation</p>
+            <p class="tagline">"Fierce advocate for gender justice"</p>
+            <a href="advocate_details/IndiraJaising.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/6.jpg" alt="Lawyer Harish Salve">
+        </div>
+        <div class="details">
+            <h1>Harish Salve</h1>
+            <p class="location">📍 New Delhi, India</p>
+            <p class="expertise">Specialization: Corporate & Constitutional Law</p>
+            <p class="tagline">"India’s top corporate lawyer"</p>
+            <a href="advocate_details/HarishSalve.html"><button>Read More</button></a>
+        </div>
+    </div>
+
+    
+    <div class="cards">
+      <div class="image">
+          <img src="images/expertise/8.jpg" alt="Lawyer K.K. Venugopal">
+      </div>
+      <div class="details">
+          <h1>K.K. Venugopal</h1>
+          <p class="location">📍 Chennai, Tamil Nadu</p>
+          <p class="expertise">Specialization: Constitutional Law, Human Rights</p>
+          <p class="tagline">"Former Attorney General of India"</p>
+          <a href="advocate_details/KKVenugopal.html"><button>Read More</button></a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="image">
+          <img src="images/expertise/9.jpg" alt="Lawyer Ujjwal Nikam">
+      </div>
+      <div class="details">
+          <h1>Ujjwal Nikam</h1>
+          <p class="location">📍 Pune, Maharashtra</p>
+          <p class="expertise">Specialization: Criminal Law, Terrorism Cases</p>
+          <p class="tagline">"Renowned public prosecutor in India"</p>
+          <a href="advocate_details/UjjwalNikam.html"><button>Read More</button></a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="image">
+          <img src="images/expertise/10.avif" alt="Lawyer Rajeev Dhavan">
+      </div>
+      <div class="details">
+          <h1>Rajeev Dhavan</h1>
+          <p class="location">📍 Lucknow, Uttar Pradesh</p>
+          <p class="expertise">Specialization: Constitutional Law, Human Rights</p>
+          <p class="tagline">"Noted advocate for landmark constitutional cases"</p>
+          <a href="advocate_details/RajeevDhavan.html"><button>Read More</button></a>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="image">
+          <img src="images/expertise/11.jpg" alt="Lawyer K. Parasaran">
+      </div>
+      <div class="details">
+          <h1>K. Parasaran</h1>
+          <p class="location">📍 Chennai, Tamil Nadu</p>
+          <p class="expertise">Specialization: Constitutional Law, Civil Law</p>
+          <p class="tagline">"Padma Vibhushan awardee and senior advocate"</p>
+          <a href="advocate_details/KParasaran.html"><button>Read More</button></a>
+      </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/12.jpeg" alt="Lawyer Mukul Rohatgi">
+        </div>
+        <div class="details">
+            <h1>Mukul Rohatgi</h1>
+            <p class="location">📍 Ahmedabad, Gujarat</p>
+            <p class="expertise">Specialization: Criminal Law, Corporate Law</p>
+            <p class="tagline">"Former Attorney General of India"</p>
+            <a href="advocate_details/MukulRohatgi.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/13.png" alt="Lawyer Kapil Sibal">
+        </div>
+        <div class="details">
+            <h1>Kapil Sibal</h1>
+            <p class="location">📍 Kolkata, West Bengal</p>
+            <p class="expertise">Specialization: Constitutional Law, Arbitration</p>
+            <p class="tagline">"Renowned lawyer and politician"</p>
+            <a href="advocate_details/KapilSibal.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/15.avif" alt="Lawyer Shyam Divan">
+        </div>
+        <div class="details">
+            <h1>Shyam Divan</h1>
+            <p class="location">📍 Bengaluru, Karnataka</p>
+            <p class="expertise">Specialization: Environmental Law, Civil Rights</p>
+            <p class="tagline">"Senior advocate in landmark privacy law cases"</p>
+            <a href="advocate_details/ShyamDivan.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/14.jpg" alt="Lawyer Salman Khurshid">
+        </div>
+        <div class="details">
+            <h1>Salman Khurshid</h1>
+            <p class="location">📍 Bhopal, Madhya Pradesh</p>
+            <p class="expertise">Specialization: Constitutional Law, Public Policy</p>
+            <p class="tagline">"Senior lawyer and former External Affairs Minister of India"</p>
+            <a href="advocate_details/SalmanKhurshid.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/16.jpg" alt="Lawyer C. Aryama Sundaram">
+        </div>
+        <div class="details">
+            <h1>C. Aryama Sundaram</h1>
+            <p class="location">📍 Jaipur, Rajasthan</p>
+            <p class="expertise">Specialization: Corporate Law, Media Law</p>
+            <p class="tagline">"Leading corporate and commercial lawyer"</p>
+            <a href="advocate_details/AryamaSundaram.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/17.jpg" alt="Lawyer Manish Tewari">
+        </div>
+        <div class="details">
+            <h1>Manish Tewari</h1>
+            <p class="location">📍 Chandigarh, Punjab</p>
+            <p class="expertise">Specialization: Media Law, Constitutional Law</p>
+            <p class="tagline">"Prominent lawyer and political leader"</p>
+            <a href="advocate_details/ManishTewari.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/18.jpg" alt="Lawyer H.S. Phoolka">
+        </div>
+        <div class="details">
+            <h1>H.S. Phoolka</h1>
+            <p class="location">📍 Amritsar, Punjab</p>
+            <p class="expertise">Specialization: Human Rights, Criminal Law</p>
+            <p class="tagline">"Known for advocacy for 1984 anti-Sikh riot victims"</p>
+            <a href="advocate_details/HSPhoolka.html"><button>Read More</button></a>
+        </div>
+    </div>
+
+    <div class="cards">
+      <div class="image">
+          <img src="images/expertise/19.jpg" alt="Lawyer Anand Yagnik">
+      </div>
+      <div class="details">
+          <h1>Anand Yagnik</h1>
+          <p class="location">📍 Ahmedabad, Gujarat</p>
+          <p class="expertise">Specialization: Human Rights, Constitutional Law</p>
+          <p class="tagline">"Leading advocate in social justice and public interest litigation"</p>
+          <a href="advocate_details/AnandYagnik.html"><button>Read More</button></a>
+      </div>
+    </div>
+    
+    <!-- 2. Rasesh Mehta (Surat, Gujarat) -->
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/20.jpg" alt="Lawyer Rasesh Mehta">
+        </div>
+        <div class="details">
+            <h1>Rasesh Mehta</h1>
+            <p class="location">📍 Surat, Gujarat</p>
+            <p class="expertise">Specialization: Criminal Law, Civil Law</p>
+            <p class="tagline">"Defending high-profile criminal and civil cases with expertise"</p>
+            <a href="advocate_details/RaseshMehta.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <!-- 3. Bhavesh Patel (Vadodara, Gujarat) -->
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/boy.jpg" alt="Lawyer Bhavesh Patel">
+        </div>
+        <div class="details">
+            <h1>Bhavesh Patel</h1>
+            <p class="location">📍 Vadodara, Gujarat</p>
+            <p class="expertise">Specialization: Corporate Law, Arbitration</p>
+            <p class="tagline">"Experienced in high-stakes corporate disputes and arbitration cases"</p>
+            <a href="advocate_details/BhaveshPatel.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <!-- 4. Jaydeep Trivedi (Rajkot, Gujarat) -->
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/boy.jpg" alt="Lawyer Jaydeep Trivedi">
+        </div>
+        <div class="details">
+            <h1>Jaydeep Trivedi</h1>
+            <p class="location">📍 Rajkot, Gujarat</p>
+            <p class="expertise">Specialization: Property Law, Family Law</p>
+            <p class="tagline">"Trusted legal counsel for family disputes and property settlements"</p>
+            <a href="advocate_details/JaydeepTrivedi.html"><button>Read More</button></a>
+        </div>
+    </div>
+    
+    <!-- 5. Meghna Desai (Vadodara, Gujarat) -->
+    <div class="cards">
+        <div class="image">
+            <img src="images/expertise/girl.jpg" alt="Lawyer Meghna Desai">
+        </div>
+        <div class="details">
+            <h1>Meghna Desai</h1>
+            <p class="location">📍 Vadodara, Gujarat</p>
+            <p class="expertise">Specialization: Environmental Law, Public Interest Litigation</p>
+            <p class="tagline">"Dedicated advocate for environmental protection and justice"</p>
+            <a href="advocate_details/MeghnaDesai.html"><button>Read More</button></a>
+        </div>
+    </div>
+
+
+    </div>
+
+    <!-- footer section -->
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="logo"><a href="home.html">Find MyAdvocate <span>Where Legal Guidance Meets You</span></a></h2>
+              <p>
+				"FindMyAdvocate connects you with trusted legal experts, making justice simple and accessible. Empowering you to navigate your rights with confidence."</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+				<li><a href="home.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Home </a></li>
+				<li><a href="experts.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Experts </a></li>
+				<li><a href="About.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>About </a></li>
+				<li><a href="blogntest.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Blogs </a></li>
+				<li><a href="contact.html" class="py-1 d-block"><span class="ion-ios-arrow-forward mr-3"></span>Contact Us</a></li>
+			  </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Find MyAdvocate</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 70966 52048</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">xyz@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Contact Hours</h2>
+              <div class="opening-hours">
+              	<h4>Opening Days:</h4>
+              	<p class="pl-3">
+              		<span>Monday–Friday : 9AM to 8PM</span>
+              		<span>Saturday : 9AM to 6PM</span>
+              	</p>
+              	<h4>Vacations:</h4>
+              	<p class="pl-3">
+              		<span>All Sunday And</span>
+              		<span>All Official Holidays</span>
+              	</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+    <svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+    </svg>
+  </div>
+
+  <script src="js/searchbar.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

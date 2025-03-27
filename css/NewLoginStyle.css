@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%; */
+  /* https://static.vecteezy.com/system/resources/previews/036/461/483/non_2x/computer-technology-background-laptop-login-screen-with-data-and-software-download-status-elements-that-shows-work-isometric-image-blue-background-illustration-vector.jpg */
+  /* https://t3.ftcdn.net/jpg/03/70/92/84/360_F_370928450_R6g8c0j5cey86PUXE32W7KMiqIUe1fOI.jpg */
+  /* https://e0.pxfuel.com/wallpapers/789/911/desktop-wallpaper-professional-office-background-office-professional-business.jpg */
+  /* https://img.freepik.com/free-vector/geometric-gradient-futuristic-background_23-2149116406.jpg */
+  /* https://images.unsplash.com/photo-1521587760476-6c12a4b040da?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGF3fGVufDB8fDB8fHww */
+  /* background: url('../images/login.jpg'), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 246, 246, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+
+#remember {
+  accent-color: #fff;
+}
+
+.forget label {
+  display: flex;
+  align-items: center;
+}
+
+.forget label p {
+  margin-left: 8px;
+}
+
+.wrapper a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+} */
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: url('/images/login.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(164, 167, 186, 0.15); /* Semi-transparent black */
+  backdrop-filter: blur(8px);
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  margin: 80px auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px;
+  top: 14px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input {
+  width: 100%;
+  padding: 12px 10px 12px 35px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  color: #fff;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-bottom: 1px solid #fff;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background-color: #fff; /* Solid color */
+  color: #333;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.or {
+  font-size: 1rem;
+  margin: 1rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.icons {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.icons i {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 0.8rem 1.2rem;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.icons i:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.messageDiv {
+  background-color: rgba(255, 69, 58, 0.8);
+  color: white;
+  padding: 10px;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  text-align: center;
+  animation: fadeOut 7s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+  
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .icons i {
+    padding: 0.6rem 1rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.2rem;
+    max-width: 95%;
+  }
+
+  .form-title {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 0.85rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+    padding: 8px 0;
+  }
+
+  .icons i {
+    padding: 0.5rem 0.8rem;
+    font-size: 1.1rem;
+  }
+}
+

@@ -1,0 +1,153 @@
+/* Search Bar Section */
+.search-bar-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.search-bar-container {
+    position: relative;
+    display: inline-block;
+    width: 90%; /* Increased width */
+    max-width: 700px; /* Increased maximum width */
+}
+
+.search-bar-container input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #8c7ae6;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    padding-right: 40px; /* Space for the clear icon */
+}
+
+.search-bar-container input:focus {
+    border-color: #afa939;
+}
+
+/* Clear Icon Styling */
+.search-bar-container .clear-icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #8c7ae6;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+}
+
+.search-bar-container input:not(:placeholder-shown) + .clear-icon {
+    display: block;
+}
+
+.search-bar-container .clear-icon:hover {
+    color: #afa939;
+}
+
+/* Cards Section */
+.cards-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns, each equally spaced */
+    gap: 20px; /* Spacing between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.cards {
+    background-color: #222831;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgb(79, 78, 78);
+    text-align: center; /* Center all card content */
+    overflow: visible; /* Ensure content is visible */
+    display: flex;
+    flex-direction: column; /* Stack content vertically inside the card */
+    width: 100%; /* Full width of the grid cell */
+    min-height: 450px; /* Increased minimum height for content visibility */
+    padding-bottom: 20px; /* Ensure extra space at the bottom */
+}
+
+.cards:hover {
+    box-shadow: 3px 3px 15px #212529;
+}
+
+.image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Keeps images proportional */
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.details {
+    padding: 15;
+    color: white;
+    font-family: Arial, sans-serif;
+    flex-grow: 1; /* Ensures the details section fills remaining vertical space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced out evenly */
+}
+
+.details h1 {
+    font-size: 1.4em; /* Slightly larger for prominence */
+    color: #f8f9fa; /* Light color for name */
+    margin: 10px 0;
+}
+
+.details .location {
+    font-size: 0.9em;
+    color: #f1c40f; /* Gold for location text */
+    margin: 10px 0; /* Increased margin for spacing */
+    line-height: 1.6; /* Adjusted line height for spacing */
+}
+
+.details .expertise {
+    font-size: 0.9em;
+    color: #dfe6e9; /* Light gray for specialization text */
+    margin: 10px 0; /* Increased margin for spacing */
+    line-height: 1.6; /* Adjusted line height for spacing */
+}
+
+.details .tagline {
+    font-size: 0.8em;
+    font-style: italic;
+    color: #b2bec3; /* Muted gray for tagline */
+    margin-bottom: 20px; /* Increased bottom margin for spacing */
+    line-height: 1.8; /* Adjusted line height for spacing */
+}
+
+button {
+    background-color: #f8f9fa; /* Light gray for normal state */
+    color: #212529; /* Dark text */
+    border: 1px solid #8c7ae6; /* Muted purple */
+    padding: 5px 15px;
+    border-radius: 20px; /* Rounded for elegance */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #afa939; /* Green for hover */
+    color: white;
+    border: 1px solid #afa939; /* Match border with hover color */
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .search-bar-container {
+        width: 100%;
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr); /* Show 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr; /* Show 1 card per row */
+    }
+}

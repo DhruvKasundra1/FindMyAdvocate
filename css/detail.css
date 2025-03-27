@@ -1,0 +1,118 @@
+/* Container Styles */
+.lawyer-info-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 40px auto;
+    padding: 20px;
+    background: #212529; /* Page background */
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Ensure text is visible */
+  }
+  
+  /* Profile Header */
+  .lawyer-info-container .profile-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .lawyer-info-container .profile-header img {
+    width: 70%;
+    height: 350px;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+  
+  .lawyer-info-container .profile-header h1 {
+    margin: 15px 0;
+    font-size: 28px;
+    color: #ffffff;
+  }
+  
+  .lawyer-info-container .profile-header p {
+    font-size: 16px;
+    color: #cccccc; /* Subdued color for subtitle */
+  }
+  
+  /* Profile Details */
+  .lawyer-info-container .profile-details {
+    margin-top: 20px;
+  }
+  
+  .lawyer-info-container .profile-details h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #ffc107; /* Highlight color for titles */
+    text-align: left; /* Center align titles */
+    margin-top: 20px;
+  }
+  
+  .lawyer-info-container .detail-box {
+    background: #444444; /* Box background */
+    border: 1px solid #ffc107; /* Highlight border */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .lawyer-info-container .profile-details p {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  /* Button */
+  .lawyer-info-container .btn {
+
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #212529;
+    background: #ffc107;
+    text-decoration: none;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.3s ease, color 0.3s ease;;
+  }
+  #sendbt{
+    display: flex;
+    justify-content: end;
+  }
+  
+  .lawyer-info-container .btn:hover {
+    background: #e0a800; /* Slightly darker yellow on hover */
+    color: #ffffff; /* White text for a hover effect */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .lawyer-info-container {
+      padding: 15px;
+    }
+  
+    .lawyer-info-container .profile-header img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .lawyer-info-container .profile-header h1 {
+      font-size: 24px;
+    }
+  
+    .lawyer-info-container .profile-details h3 {
+      font-size: 18px;
+    }
+  
+    .lawyer-info-container .profile-details p {
+      font-size: 14px;
+    }
+  
+    .lawyer-info-container .btn {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindMyAdvocate | Login & Signup</title>
+    <link rel="stylesheet" href="login_sign.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/logo.jpg" alt="FindMyAdvocate Logo" class="logo">
+
+        <!-- SignUp Form -->
+        <div id="signup-form">
+            <h2>Sign Up to FindMyAdvocate</h2>
+            <input type="text" id="fullName" placeholder="Full Name" required>
+            <input type="email" id="signupEmail" placeholder="Email" required>
+
+            <div class="password-field">
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+
+            <div class="password-field">
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                <i class="fas fa-eye" id="toggleConfirmPassword"></i>
+            </div>
+
+            <button onclick="signUp()">Create Account</button>
+            <button onclick="googleSignIn()" class="google-btn">Sign up with Google</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login Here</a></p>
+        </div>
+
+        <!-- Login Form -->
+    
+        <div id="login-form" style="display:none;">
+            <h2>Login to FindMyAdvocate</h2>
+            <input type="email" id="loginEmail" placeholder="Email" required>
+
+            <div class="password-field">
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <i class="fas fa-eye" id="toggleLoginPassword"></i>
+            </div>
+
+            <!-- Forgot Password Link ✅ -->
+            <p class="forgot-password" onclick="forgotPassword()">Forgot your password?</p>
+
+            <button onclick="login()">Login</button>
+            <button onclick="googleSignIn()" class="google-btn">Login with Google</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up Now</a></p>
+        </div>
+
+    </div>
+
+<script type="module" src="firebase-auth.js"></script>
+
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const toggleConfirmPassword = document.querySelector('#toggleConfirmPassword');
+    const toggleLoginPassword = document.querySelector('#toggleLoginPassword');
+
+    const password = document.querySelector('#signupPassword');
+    const confirmPassword = document.querySelector('#confirmPassword');
+    const loginPassword = document.querySelector('#loginPassword');
+
+    // ✅ Toggle Password Visibility
+    function toggleVisibility(inputField, icon) {
+        const type = inputField.getAttribute('type') === 'password' ? 'text' : 'password';
+        inputField.setAttribute('type', type);
+        icon.classList.toggle('fa-eye-slash');
+    }
+
+    if (togglePassword) {
+        togglePassword.addEventListener('click', () => toggleVisibility(password, togglePassword));
+    }
+
+    if (toggleConfirmPassword) {
+        toggleConfirmPassword.addEventListener('click', () => toggleVisibility(confirmPassword, toggleConfirmPassword));
+    }
+
+    if (toggleLoginPassword) {
+        toggleLoginPassword.addEventListener('click', () => toggleVisibility(loginPassword, toggleLoginPassword));
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message</title>
+    <link rel="stylesheet" href="css/contactlawyer_form.css">
+    <script>
+        function validateForm(event) {
+            const phoneInput = document.querySelector('input[name="contact_no"]');
+            const messageInput = document.querySelector('textarea[name="message"]');
+            const phoneRegex = /^\d{10,}$/; // Ensures at least 10 digits
+            const minMessageLength = 10;
+
+            if (!phoneRegex.test(phoneInput.value)) {
+                alert("Phone number must be at least 10 digits.");
+                phoneInput.focus();
+                return false;
+            }
+
+            if (messageInput.value.length < minMessageLength) {
+                alert("Message must be at least 10 characters long.");
+                messageInput.focus();
+                return false;
+            }
+
+            showSuccessMessage();
+            return true; // Proceed with form submission
+        }
+
+        function showSuccessMessage() {
+            document.getElementById("contact-form").style.display = "none";
+
+            let successMessage = document.createElement("div");
+            successMessage.innerHTML = "<h2 style='color: green;'>After completing CAPTCHA, your message has been sent!</h2><p>Redirecting to home...</p>";
+            successMessage.style.textAlign = "center";
+            document.querySelector(".form").appendChild(successMessage);
+
+            setTimeout(() => {
+                window.location.href = "home.html";
+            }, 8000);
+        }
+    </script>
+</head>
+<body>
+
+    <div class="contact">
+        <div class="form">
+            <h1 id="lawyer-name-heading">Contact Lawyer</h1> <!-- Dynamic Name Will Appear Here -->
+            <form id="contact-form" action="https://formsubmit.co/default@example.com" method="post" onsubmit="return validateForm(event);">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="number" name="contact_no" placeholder="Phone No" required>
+                <input type="text" name="subject" placeholder="Subject">
+
+                <input type="hidden" name="_template" value="box">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5502/home.html"> <!-- Redirect after success -->
+
+                <textarea name="message" placeholder="Message" required></textarea>
+                <div class="button-container">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lawyerEmail = urlParams.get("email") || "default@example.com";
+            const lawyerName = urlParams.get("name") || "Lawyer";
+
+            document.getElementById("contact-form").action = `https://formsubmit.co/${lawyerEmail}`;
+            document.getElementById("lawyer-name-heading").innerText = `Contact ${lawyerName}`;
+        });
+    </script>
+
+</body>
+</html>

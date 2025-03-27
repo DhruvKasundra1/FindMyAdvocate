@@ -1,0 +1,107 @@
+/* Main Blog List Styling */
+.weird-list .weird-card {
+  display: flex;
+  gap: 16px;
+  padding: 26px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-left: 15px;
+  margin-bottom: 24px;
+}
+
+.weird-list .weird-card img {
+  width: 160px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.weird-list .weird-blog-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weird-list .weird-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.weird-list .weird-description {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Labels Styling #222831 */
+.weird-label {
+  background-color: #212529;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-right: 6px;
+  margin-top: 10px;
+}
+
+/* Popular Posts Section */
+.weird-popular-posts .weird-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+}
+
+.weird-popular-posts img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.weird-popular-posts .weird-post-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Categories Section */
+.weird-categories .weird-label {
+  margin: 4px;
+}
+
+/* Download Button */
+.weird-download-btn {
+  background: #ff2a4c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  margin-top: 40px;
+  border-radius: 24px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.weird-download-btn:hover {
+  background-color: #212529;
+}
+
+/* Container Styling */
+.weird-post-box .weird-container {
+  display: flex;
+  gap: 48px;
+}
+
+@media (max-width: 1000px) {
+  .weird-post-box .weird-container {
+    flex-direction: column;
+  }
+}
