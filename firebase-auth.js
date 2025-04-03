@@ -1,4 +1,4 @@
-// ✅ Import Firebase SDKs
+//  Import Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
 import { 
     getAuth, 
@@ -14,7 +14,7 @@ import {
     reauthenticateWithCredential 
 } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
 
-// ✅ Firebase Configuration
+//  Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDZhGA9fKCY9gzcas3T2VegC-balWk7Qmk",
     authDomain: "findmyadvocate-d0106.firebaseapp.com",
@@ -25,12 +25,12 @@ const firebaseConfig = {
     measurementId: "G-H3YTZQHW1F"
 };
 
-// ✅ Initialize Firebase
+//  Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-// ✅ Attach Delete Account Function to Button
+//  Attach Delete Account Function to Button
 document.addEventListener("DOMContentLoaded", function () {
     const deleteBtn = document.getElementById("deleteBtn");
     if (deleteBtn) {
@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// ✅ Delete Account Function (Fixed for Google Users)
+//  Delete Account Function (Fixed for Google Users)
 window.deleteAccount = function() {
     const user = auth.currentUser;
     const checkbox = document.getElementById("confirmCheckbox");
@@ -63,7 +63,7 @@ window.deleteAccount = function() {
     const isGoogleUser = user.providerData.some(provider => provider.providerId === "google.com");
 
     if (isGoogleUser) {
-        // ✅ Reauthenticate Google user
+        //  Reauthenticate Google user
         signInWithPopup(auth, provider)
             .then((result) => {
                 result.user.delete()
@@ -80,7 +80,7 @@ window.deleteAccount = function() {
             });
 
     } else {
-        // ✅ Reauthenticate Email/Password user
+        //  Reauthenticate Email/Password user
         const password = prompt("Enter your password to confirm deletion:");
         if (!password) {
             alert("Password is required for security purposes.");
@@ -108,7 +108,7 @@ window.deleteAccount = function() {
     }
 };
 
-// ✅ Sign Up Function (With Email Verification & Strong Password Validation)
+//  Sign Up Function (With Email Verification & Strong Password Validation)
 window.signUp = function() {
     const fullName = document.getElementById("fullName").value;
     const email = document.getElementById("signupEmail").value;
@@ -128,7 +128,7 @@ window.signUp = function() {
         .then((userCredential) => {
             const user = userCredential.user;
 
-            // ✅ Send Email Verification
+            //  Send Email Verification
             sendEmailVerification(user).then(() => {
                 alert("Verification email sent! Please check your inbox.");
             });
@@ -141,7 +141,7 @@ window.signUp = function() {
         });
 };
 
-// ✅ Login Function (Check Email Verification)
+//  Login Function (Check Email Verification)
 window.login = function() {
     const email = document.getElementById("loginEmail").value;
     const password = document.getElementById("loginPassword").value;
@@ -164,7 +164,7 @@ window.login = function() {
         });
 };
 
-// ✅ Google Sign-In (No Email Verification Needed)
+//  Google Sign-In (No Email Verification Needed)
 window.googleSignIn = function() {
     signInWithPopup(auth, provider)
         .then((result) => {
@@ -176,7 +176,7 @@ window.googleSignIn = function() {
         });
 };
 
-// ✅ Check User Login State & Redirect If Verified
+//  Check User Login State & Redirect If Verified
 onAuthStateChanged(auth, (user) => {
     if (user) {
         if (user.emailVerified) {
@@ -188,7 +188,7 @@ onAuthStateChanged(auth, (user) => {
 });
 
 
-// ✅ Toggle Forms (Switch between Login & Sign Up)
+//  Toggle Forms (Switch between Login & Sign Up)
 window.toggleForms = function() {
     document.getElementById("signup-form").style.display = 
         document.getElementById("signup-form").style.display === "none" ? "block" : "none";
@@ -196,7 +196,7 @@ window.toggleForms = function() {
         document.getElementById("login-form").style.display === "none" ? "block" : "none";
 };
 
-// ✅ Logout Function
+//  Logout Function
 window.logout = function () {
     signOut(auth)
         .then(() => {
@@ -210,7 +210,7 @@ window.logout = function () {
         });
 };
 
-// ✅ Attach Logout Function to Navbar Logout Link
+//  Attach Logout Function to Navbar Logout Link
 document.addEventListener("DOMContentLoaded", function () {
     const logoutBtn = document.getElementById("logout");
 
@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-// ✅ Strong Password Validation
+//  Strong Password Validation
 function validatePassword(password) {
     const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[\W_])[A-Za-z\d\W_]{8,}$/;
 
@@ -233,7 +233,7 @@ function validatePassword(password) {
     return true;
 }
 
-// ✅ Forgot Password Function
+//  Forgot Password Function
 window.forgotPassword = function() {
     const email = document.getElementById("loginEmail").value;
 
